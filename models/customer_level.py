@@ -8,3 +8,4 @@ class CustomerLevel(models.Model):
 
 		name = fields.Char('Name', help='e.g. bronze or silver')
 		description = fields.Text('Description')
+		partner_ids = fields.One2many('res.partner','customer_level_id','Customers on this level')
