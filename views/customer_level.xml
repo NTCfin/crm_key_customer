@@ -13,6 +13,33 @@
             </field>
         </record>
 
+		<record id="customer_level_form_key_customer" model="ir.ui.view">
+            <field name="name">customer.level.form.key.customer</field>
+            <field name="model">crm_key_customer.customer_level</field>
+            <field name="arch" type="xml">
+                <form string="Customer Levels">
+					<header>
+					</header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" required="True"/>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <field name="description"/>
+                        </group>
+
+                       
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+		
+		
+		
         <!-- Create an action that is triggered when the menuitem is clicked. It launches the tree view -->
         <record id="action_customer_levels" model="ir.actions.act_window">
           <field name="name">Customer Levels</field>
@@ -22,6 +49,12 @@
           <field name="view_mode">tree,form</field>
         </record>
 
+		
+		
+		
+		
+		
+		
         <!-- Add the menuitem under Sales / Configuration -->
         <menuitem id="menuitem_customer_levels" name="Customer levels" action="action_customer_levels" parent="sales_team.menu_sale_config" />
 
