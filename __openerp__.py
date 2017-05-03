@@ -25,6 +25,6 @@ Key Customer (Demo module)
 * Demo module showcasing some Odoo features
 
 """,
-    'data': [
+    'data': ['views/res_partner.xml'_
     ],
 }
